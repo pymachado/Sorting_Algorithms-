@@ -2,9 +2,9 @@
 
 pragma solidity ^0.8.0;
 
-library BurbleSort {
+library BubbleSort {
 
-    function burbleSort(uint[] memory array) internal pure returns(uint[] memory){
+    function bubbleSort(uint[] memory array) internal pure returns(uint[] memory){
         require(array.length != 0, "BurbleSort: Array is null");
         for(uint i = 0; i <= array.length - 1; i++) {
             for(uint j = i+1; j <= array.length - 1; j++) {
@@ -22,7 +22,7 @@ library BurbleSort {
 contract Example {
     
     function fooSort(uint[] memory list) public pure returns(uint[] memory) {
-        BurbleSort.burbleSort(list);
+        BubbleSort.bubbleSort(list);
         return list;
     }
 
